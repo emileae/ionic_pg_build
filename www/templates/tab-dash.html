@@ -1,0 +1,82 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="">
+    
+    <!-- <div class="list card" ng-repeat="goal in goals">
+      <div class="item item-divider">{{goal.title}}</div>
+      <div class="item item-body">
+        <div>
+          {{goal.description}}
+        </div>
+      </div>
+    </div> -->
+
+    <div class="list card" ng-repeat="goal in goals">
+
+      <div class="item item-avatar">
+        <img src="{{goal.avatar}}">
+        <h2>{{goal.title}}</h2>
+        <p>{{goal.user_name}}</p>
+      </div>
+
+      <div class="item item-image">
+        <img src="{{goal.image}}" on-hold="openModal(goal.title, 'goal-modal')">
+      </div>
+
+      <!-- <a class="item item-icon-left assertive" href="#">
+        <span>
+          <i class="icon ion-heart"></i>
+          {{goal.likes}} 
+        </span>
+        <span>
+          <i class="icon ion-eye"></i>
+          {{goal.views}} 
+        </span>
+      </a> -->
+      <div class="item tabs tabs-secondary tabs-icon-left">
+          <a class="tab-item" href="#">
+            <i class="icon ion-heart"></i>
+            ({{goal.likes}})
+          </a>
+          <a class="tab-item" href="#" on-tap="openModal(goal.title, 'comment-modal')">
+            <i class="icon ion-chatbox"></i>
+            (-)
+          </a>
+          <a class="tab-item" href="#">
+            <i class="icon ion-share" on-tap="share(goal.image)"></i>
+            Share
+          </a>
+          <a class="tab-item" href="#">
+            <i class="icon ion-pin" on-tap="openModal(goal.title, 'pin-modal')"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- <div class="list card">
+      <div class="item item-divider">Recent Updates</div>
+      <div class="item item-body">
+        <div>
+          There is a fire in <b>sector 3</b>
+        </div>
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">Health</div>
+      <div class="item item-body">
+        <div>
+          You ate an apple today!
+        </div>
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">Upcoming</div>
+      <div class="item item-body">
+        <div>
+          You have <b>29</b> meetings on your calendar tomorrow.
+        </div>
+      </div>
+    </div> -->
+  </ion-content>
+</ion-view>

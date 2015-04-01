@@ -1,0 +1,16 @@
+<ion-modal-view class="comment-modal">
+	<ion-header-bar no-tap-scroll="true">
+  		<h1 class="title">Comment on {{current_title}}</h1>
+  		<i class="icon ion-close-round icon-right" on-tap="closeModal('comment-modal')"></i>
+	</ion-header-bar>
+	<ion-content>
+		<form>
+			<div class="list">
+			  <label class="item item-input">
+			    <textarea placeholder="Comments"></textarea>
+			  </label>
+			  <button class="item item-input button-full button-outline button-positive">Post comment</button>
+			</div>
+		</form>
+	</ion-content>
+</ion-modal-view>
